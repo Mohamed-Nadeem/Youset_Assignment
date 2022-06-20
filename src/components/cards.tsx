@@ -1,9 +1,11 @@
+// This component is used for the package cards shown in the main screen
+
 import * as React from 'react';
 import PurchaseModal from './purchaseModal';
 import { Card, CardContent, Typography, CardActions, Button } from "@mui/material";
 
+//Defining the types of the props
 interface packageDetailsProps {
-  // using `interface` is also ok
   name: string;
   description: string;
   price: number;
@@ -11,9 +13,9 @@ interface packageDetailsProps {
 
 export default function Cards({ name, description, price }: packageDetailsProps) {
 
+  //Function to open pop up on click of purchase
   const [openModal, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
-  // const handleClose = () => setOpen(false);
 
   return (
     <Card sx={{ minWidth: 275, maxWidth: "30%", backgroundColor: "#E9F1F7" }}>

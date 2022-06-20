@@ -29,8 +29,6 @@ export const App: React.FunctionComponent = () => {
           </Grid>
         </Container>
        
-        {/* {data.packages.map((name,description,price) => (<Cards name={name} description={description} price={price} />))} */}
-        {/* TODO: Add components here */}
       </div>
     </ThemeProvider>
   );

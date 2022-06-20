@@ -1,6 +1,9 @@
+// this component is the popup model for the purchase button click
+
 import * as React from 'react';
 import { Box, Button, Typography, Modal, TextField} from '@mui/material';
 
+//Defining the style for the box that the popup renders in
 const style = {
     position: 'absolute' as 'absolute',
     top: '50%',
@@ -15,6 +18,7 @@ const style = {
     p: 4,
   };
 
+  // Defining the prop types
   interface packageModalProps {
     open: boolean;
   };
@@ -22,7 +26,8 @@ const style = {
   export default function purchaseModal({ open }: packageModalProps) {
     const [openModal, setOpenModal] = React.useState(false);
     const [firstLoad, setFirstLoad] = React.useState(false);
-    // const handleOpen = () => setOpen(true);
+
+    // close function for the popup
     const handleClose = () => {
         setOpenModal(false);
         window.location.href = "https://www.example.com";
